@@ -16,7 +16,7 @@ use base qw/ Tk::Derived Tk::Entry /;
     Construct Tk::Widget 'Entry';
 }
 
-our $VERSION = '1.5';
+our $VERSION = '1.6';
 
 =head1 NAME
 
@@ -58,11 +58,11 @@ sub Populate
     my ($w,$args) = @_;
 
     $w->ConfigSpecs(
-	'-state',     => ['METHOD',  qw(state       State        normal) ],
-	'-editcolor'  => ['PASSIVE', qw(editColor   EditColor),  Tk::WHITE()],
-	'-background' => ['PASSIVE', qw(background  Background), Tk::NORMAL_BG()],
-	'-foreground' => ['PASSIVE', qw(foreground  Foreground), Tk::BLACK()],
-	'DEFAULT'     => ['SELF'],
+        '-state',     => ['METHOD',  'state',       'State',      'normal'],
+        '-editcolor'  => ['PASSIVE', 'editColor',   'EditColor',  Tk::WHITE()],
+        '-background' => ['PASSIVE', 'background',  'Background', Tk::NORMAL_BG()],
+        '-foreground' => ['PASSIVE', 'foreground*,  *Foreground', Tk::BLACK()],
+        'DEFAULT'     => ['SELF'],
 	);
     $w;
 };
@@ -72,11 +72,11 @@ sub state {
     if (@_) {
         my $state = shift;
         if ($state eq 'normal') {
-	    $w->Tk::Entry::configure(-background => $w->{Configure}{-editcolor});
-	    $w->Tk::Entry::configure(-foreground => $w->{Configure}{-foreground});
+            $w->Tk::Entry::configure(-background => $w->{Configure}{-editcolor} || Tk::NORMAL_BG());
+            $w->Tk::Entry::configure(-foreground => $w->{Configure}{-foreground} || Tk::BLACK());
         } else {
-            $w->Tk::Entry::configure(-background => $w->{Configure}{-background});
-	    $w->Tk::Entry::configure(-foreground => Tk::DISABLED());
+            $w->Tk::Entry::configure(-background => $w->{Configure}{-background} );
+            $w->Tk::Entry::configure(-foreground => Tk::DISABLED());
         }
     	$w->Tk::Entry::configure(-state => $state);
     } else {
