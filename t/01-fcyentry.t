@@ -1,6 +1,4 @@
 ### tests for perl/Tk FcyEntry widget
-###
-### $Source: t/fcyentry.t $ $Revision: 1.2 $
 
 # About the tests:  Biggest miss is that only simple flow is checked.
 #		    But this means only that the code is not verified
@@ -10,7 +8,8 @@ use strict;
 use Tk;
 use Tk::FcyEntry;	# replace std entry
 
-my $mw = Tk::MainWindow->new();
+my $mw;
+eval{ $mw = Tk::MainWindow->new(); };
 if (! $mw) {
   # there seems to be no x-server available or something else went wrong
   # .. skip all tests

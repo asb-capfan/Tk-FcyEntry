@@ -9,7 +9,6 @@ WriteMakefile(
         ExtUtils::MakeMaker => '5.41',   # for #! fixing
 		Tk => '402.002',		      # opt. aliases
     }, # e.g., Module::Name => 1.1
-    ($] >= 5.005 ?     ## Add these new keywords supported since 5.005
-      (ABSTRACT_FROM  => 'lib/Tk/FcyEntry.pm', # retrieve abstract from module
-       AUTHOR         => 'Alexander Becker <asb@cpan.org>') : ()),
+    ABSTRACT_FROM  => 'lib/Tk/FcyEntry.pm', # retrieve abstract from module
+    AUTHOR         => 'Alexander Becker <asb@cpan.org>',
 );
