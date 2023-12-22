@@ -4,7 +4,7 @@ Tk-FcyEntry
 This module is deprecated.
 
 It once served the purpose to replace the standard Perl/Tk Entry widget in order to reflect the Entry's state.
-This is standard behavior of an Entry widget by now, so you can just use a plain Entry widget.
+This is standard behavior of an Entry widget by now, so you can just use a plain Entry widget (at least, in Tk 800.x).
 
 DEPENDENCIES
 
