@@ -16,7 +16,7 @@ use base qw/ Tk::Derived Tk::Entry /;
     Construct Tk::Widget 'Entry';
 }
 
-our $VERSION = '1.7';
+our $VERSION = '1.8';
 
 =head1 NAME
 

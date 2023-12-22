@@ -4,7 +4,6 @@ MANIFEST
 README
 t/00-Tk-FcyEntry-load.t
 t/01-fcyentry.t
-t/TESTsetup
 lib/Tk/FcyEntry.pm
 example/fcyentry.pl
 META.yml                                 Module YAML meta-data (added by MakeMaker)
