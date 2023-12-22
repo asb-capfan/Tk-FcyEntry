@@ -1,0 +1,7 @@
+Revision history for Perl extension Tk::FcyEntry.
+
+1.4		2016-11-14
+	- separated Tk::FcyEntry from Tk::ACH
+	- improved example file
+	- added .pl file extension to example file
+
