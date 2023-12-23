@@ -3,6 +3,8 @@ Revision history for Perl extension Tk::FcyEntry.
 1.9		2023-12-23
 	- added LICENSE file
 	- added author tests in xt folder
+	- extended MakeFile
+	- created GitHub repository for Tk::FcyEntry
 
 1.8		2017-01-12
 	- tewaked tests. There should be less failing auto tests due to missing display now.
