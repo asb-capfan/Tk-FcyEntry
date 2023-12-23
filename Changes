@@ -1,10 +1,14 @@
 Revision history for Perl extension Tk::FcyEntry.
 
+1.9		2023-12-23
+	- added LICENSE file
+	- added author tests in xt folder
+
 1.8		2017-01-12
 	- tewaked tests. There should be less failing auto tests due to missing display now.
 
 1.7		2016-11-22
-	- improved tests: do not fail if there is no display, skip the tests
+	- improved tests: do not fail if there is no display, skip the tests (RT #117714)
 	- removed very old Perl version check from Makefile.PL
 
 1.5		2016-11-14
