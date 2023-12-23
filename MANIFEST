@@ -4,6 +4,8 @@ MANIFEST
 README
 t/00-Tk-FcyEntry-load.t
 t/01-fcyentry.t
+xt/02-pod.t
+xt/03-pod-coverage.t
 lib/Tk/FcyEntry.pm
 example/fcyentry.pl
 META.yml                                 Module YAML meta-data (added by MakeMaker)
